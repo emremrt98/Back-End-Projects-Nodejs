@@ -1,0 +1,27 @@
+
+<% 
+const aktif = aktifSayfa;
+const onceki = aktif-1;
+const sonraki = parseInt(aktif)+1;
+const toplamSayfaSayisi = sayfaSayisi;
+ %> 
+<% if (toplamSayfaSayisi > 1) { %>
+  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
+    <a  <%= aktif != 1 ? 'href=/blog?page='+onceki : ''  %>  class="pagination-previous" <%= aktifSayfa == 1 ? 'disabled': ''  %>  title="This is the first page">Önceki</a>
+    <a <%= aktif != toplamSayfaSayisi ? 'href=/blog?page='+sonraki : ''  %> class="pagination-next" <%= aktif == toplamSayfaSayisi ? 'disabled': ''  %>>Sonraki</a>
+    <ul class="pagination-list">
+  
+      <% for( let index=1; index <=toplamSayfaSayisi; index++ ) { %>
+        
+        <li>
+          <a href="/blog?page=<%=index%> " class="pagination-link <%- index == aktifSayfa ? 'is-current': '' %> " aria-label="Goto page" aria-current="page">
+            <%- index %>
+          </a>
+        </li>
+        <% } %>
+  
+  
+    </ul>
+  </nav>
+<% } %>
+
