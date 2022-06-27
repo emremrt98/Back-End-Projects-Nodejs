@@ -1,0 +1,62 @@
+@Base_Url = http://localhost:3000/api
+
+
+
+GET {{Base_Url}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI0NDY4Y2UyYmJjODE1Nzg0ZmM5YWEiLCJpYXQiOjE2NTU5ODE3NTEsImV4cCI6MTY1NTk4NTM1MX0.T1Ze5q-Bze1H820QpNZG0P-FM9Gk-VCv390bH31aO5U
+
+
+### 
+POST {{Base_Url}}/users
+Content-Type: application/json
+
+{
+    "isim" : "Emre Reis",
+    "email" : "btk.mr58@gmail.com",
+    "userName" : "Shig",
+    "sifre" : "btk123"
+}
+
+### 
+POST {{Base_Url}}/users/giris
+Content-Type: application/json
+
+{
+    "email" : "btk.mr58@gmail.com",
+    "sifre" : "btk123"
+}
+
+
+###
+DELETE {{Base_Url}}/users/62b40f6ec57c6003a0fd11d6
+Content-Type: application/json
+
+###
+DELETE {{Base_Url}}/users/me
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI0MGY2M2M1N2M2MDAzYTBmZDExZDUiLCJpYXQiOjE2NTU5NjgzNzIsImV4cCI6MTY1NTk3MTk3Mn0.8mWlVb9AU3wrpDy8Y7GcHvZYiqAlXIraJ8oOHT5e5lU
+
+
+###
+DELETE {{Base_Url}}/users/deleteAll
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI0MGY2M2M1N2M2MDAzYTBmZDExZDUiLCJpYXQiOjE2NTU5NjgzNzIsImV4cCI6MTY1NTk3MTk3Mn0.8mWlVb9AU3wrpDy8Y7GcHvZYiqAlXIraJ8oOHT5e5lU
+
+###
+PATCH {{Base_Url}}/users/62b00276217f0e1fd465d3e1
+Content-Type: application/json
+
+{
+    "isim" : "Emawd",
+    "sifre" : "123asd12123123123"
+}
+
+
+###
+PATCH {{Base_Url}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmIyYTMyMDkxNjdkMTMyMGNkN2ZhMDMiLCJpYXQiOjE2NTU5NjY4NDMsImV4cCI6MTY1NTk3MDQ0M30.w3CqJOiyghEZLJwnHXqgDmDr4XUvEUxOaygZdL93r60
+
+{
+    "isim" : "Dayiiiiiii",
+    "sifre" : "yenisifre"
+}
